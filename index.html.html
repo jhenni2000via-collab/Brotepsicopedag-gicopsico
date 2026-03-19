@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brote Psicopedagógico</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#1A7D6F;--teal2:#2EAA8A;--green:#3A8C3F;--tl:#E6F4F1;--gl:#EAF5EB;--bg:#F5FAF9;--dark:#1B3A36;--body:#4A6963;--amber:#F5A623;--al:#FFF8E8;--border:#D4E8E4;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Open Sans',sans-serif;background:var(--bg);color:var(--body);line-height:1.7;}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;color:var(--dark);}
+
+nav{background:var(--teal);position:sticky;top:0;z-index:200;padding:0 4%;display:flex;align-items:center;justify-content:space-between;height:64px;box-shadow:0 2px 12px rgba(26,125,111,.3);}
+.nb{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nl{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:20px;}
+.nn{color:#fff;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;line-height:1.2;}
+.ns{color:rgba(255,255,255,.7);font-size:10px;}
+.nv{display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+.nv button{background:none;border:none;color:rgba(255,255,255,.9);font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;padding:6px 10px;border-radius:8px;cursor:pointer;}
+.nv button:hover{background:rgba(255,255,255,.18);}
+.nv .cta{background:var(--green);color:#fff;padding:7px 14px;}
+.nv .cta:hover{background:#2e7232;}
+
+.hero{background:linear-gradient(135deg,#0f5248,var(--teal),var(--teal2));padding:68px 5% 76px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-50px;right:-50px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.05);}
+.hd{position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:100px;opacity:.09;}
+.hi{max-width:600px;position:relative;z-index:1;}
+.hb{display:inline-block;background:rgba(255,255,255,.18);color:#fff;font-size:12px;padding:4px 14px;border-radius:20px;margin-bottom:16px;}
+.hero h1{color:#fff;font-size:clamp(24px,4vw,40px);font-weight:700;line-height:1.2;margin-bottom:12px;}
+.hero h1 span{color:rgba(255,255,255,.72);font-weight:400;font-size:.65em;display:block;margin-top:4px;}
+.hp{color:rgba(255,255,255,.85);font-size:15px;max-width:490px;margin-bottom:28px;}
+.hbtns{display:flex;gap:10px;flex-wrap:wrap;}
+.bw{background:#fff;color:var(--teal);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:11px 24px;border-radius:10px;border:none;cursor:pointer;}
+.bo{background:transparent;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:500;padding:11px 24px;border-radius:10px;border:1.5px solid rgba(255,255,255,.55);cursor:pointer;}
+
+.ts{background:#fff;padding:40px 5%;}
+.stag{display:inline-block;background:var(--tl);color:var(--teal);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:10px;}
+.ts h2{font-size:clamp(18px,3vw,26px);margin-bottom:6px;}
+.ts p{font-size:14px;color:var(--body);margin-bottom:28px;}
+.tg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;}
+.tb{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;font-family:'Montserrat',sans-serif;display:flex;flex-direction:column;align-items:center;gap:7px;transition:border-color .2s,transform .2s;}
+.tb:hover{border-color:var(--teal);background:var(--tl);transform:translateY(-3px);}
+.ti{font-size:26px;}
+.tl{font-size:12px;font-weight:700;color:var(--dark);}
+.ts2{font-size:11px;color:var(--body);}
+
+.cta-b{background:linear-gradient(120deg,var(--dark),#0f5248,var(--teal));padding:50px 5%;text-align:center;}
+.cta-b h2{color:#fff;font-size:clamp(18px,3vw,28px);margin-bottom:10px;}
+.cta-b p{color:rgba(255,255,255,.8);font-size:14px;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto;}
+.ba{background:var(--amber);color:var(--dark);font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;padding:13px 32px;border-radius:12px;border:none;cursor:pointer;}
+
+footer{background:var(--dark);color:rgba(255,255,255,.7);padding:40px 5% 22px;}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;margin-bottom:28px;}
+footer h4{font-family:'Montserrat',sans-serif;color:#fff;font-size:13px;font-weight:700;margin-bottom:10px;}
+footer p{font-size:13px;line-height:1.7;margin-top:8px;}
+footer ul{list-style:none;}
+footer ul li{font-size:12px;padding:3px 0;}
+footer ul li a{color:rgba(255,255,255,.6);text-decoration:none;}
+footer ul li a:hover{color:#fff;}
+.fb{border-top:1px solid rgba(255,255,255,.1);padding-top:16px;text-align:center;font-size:11px;color:rgba(255,255,255,.35);}
+.fb span{color:var(--teal2);}
+
+.waf{position:fixed;bottom:24px;right:24px;z-index:9999;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 16px rgba(37,211,102,.5);text-decoration:none;}
+
+/* OVERLAY */
+.ov{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.55);z-index:5000;display:none;justify-content:center;align-items:center;padding:16px;}
+.ov.show{display:flex;}
+.md{background:#fff;border-radius:18px;width:100%;max-width:680px;max-height:88vh;overflow-y:auto;position:relative;}
+.mh{background:linear-gradient(135deg,var(--teal),var(--teal2));padding:22px 26px 18px;border-radius:18px 18px 0 0;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.mt{color:#fff;font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;}
+.ms{color:rgba(255,255,255,.75);font-size:12px;margin-top:3px;}
+.mc{background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.mc:hover{background:rgba(255,255,255,.35);}
+.mb{padding:24px;}
+.mb p{font-size:14px;line-height:1.8;color:var(--body);margin-bottom:12px;}
+.mb h3{font-size:15px;margin-bottom:8px;margin-top:18px;color:var(--dark);}
+.mb h3:first-child{margin-top:0;}
+.mb ul{list-style:none;margin-bottom:12px;}
+.mb ul li{font-size:14px;color:var(--body);padding:4px 0 4px 18px;position:relative;line-height:1.6;}
+.mb ul li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700;}
+.ic{background:var(--tl);border-radius:10px;padding:14px 16px;margin-bottom:12px;}
+.icl{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--teal);font-weight:700;margin-bottom:3px;}
+.icv{font-size:13px;font-weight:600;color:var(--dark);line-height:1.6;}
+.vg{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.vc{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px;border-left:3px solid var(--teal);}
+.vc h4{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px;}
+.vc p{font-size:12px;color:var(--body);line-height:1.5;margin:0;}
+.teg{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;}
+.tec{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 14px;text-align:center;}
+.tav{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;margin:0 auto 10px;border:2px solid var(--teal);background:var(--tl);color:var(--teal);}
+.tav.g{background:var(--gl);color:var(--green);border-color:var(--green);}
+.tav.a{background:var(--al);color:#7A4A00;border-color:var(--amber);}
+.tec h4{font-size:12px;font-weight:700;color:var(--dark);margin-bottom:4px;}
+.tec p{font-size:11px;color:var(--body);line-height:1.5;}
+.sb{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:12px;display:flex;gap:14px;}
+.sn{width:42px;height:42px;border-radius:10px;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;flex-shrink:0;}
+.sn.g{background:var(--green);}
+.sn.am{background:var(--amber);color:var(--dark);}
+.sb h4{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:6px;}
+.sb p{font-size:13px;color:var(--body);line-height:1.7;margin:0;}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.tag{background:var(--tl);color:var(--teal);font-size:11px;font-weight:600;padding:2px 10px;border-radius:20px;}
+.tag.g{background:var(--gl);color:var(--green);}
+.fi{background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;overflow:hidden;}
+.fq{width:100%;background:none;border:none;cursor:pointer;padding:14px 18px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--dark);}
+.fq:hover{background:var(--tl);}
+.fa2{width:24px;height:24px;border-radius:50%;background:var(--tl);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;transition:transform .3s;}
+.fi.op .fa2{transform:rotate(180deg);background:var(--teal);color:#fff;}
+.fan{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 18px;}
+.fi.op .fan{max-height:200px;padding:0 18px 16px;}
+.fan p{font-size:13px;line-height:1.8;color:var(--body);border-top:1px solid var(--border);padding-top:12px;margin:0;}
+.st{width:100%;border-collapse:collapse;margin:12px 0;}
+.st th{background:var(--teal);color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;padding:9px 12px;text-align:left;}
+.st th:first-child{border-radius:8px 0 0 0;}
+.st th:last-child{border-radius:0 8px 0 0;}
+.st td{padding:9px 12px;font-size:13px;border-bottom:1px solid var(--border);}
+.st tr:nth-child(even) td{background:var(--tl);}
+.op2{color:var(--green);font-weight:700;}
+.cl{color:#cc4444;font-weight:700;}
+.cr{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}
+.cr:last-child{border:none;}
+.cri{font-size:18px;flex-shrink:0;margin-top:2px;}
+.crl{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--body);margin-bottom:2px;}
+.crv{font-size:13px;font-weight:600;color:var(--dark);}
+.crv a{color:var(--teal);text-decoration:none;}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.fg2 .fg2l{}
+.fmg{margin-bottom:14px;}
+.fmg label{display:block;font-size:12px;font-weight:600;color:var(--dark);margin-bottom:4px;}
+.fmg input,.fmg select,.fmg textarea{width:100%;border:1.5px solid var(--border);border-radius:9px;padding:9px 12px;font-size:13px;font-family:'Open Sans',sans-serif;color:var(--dark);background:#fff;outline:none;}
+.fmg input:focus,.fmg select:focus,.fmg textarea:focus{border-color:var(--teal);}
+.fmg textarea{resize:vertical;min-height:80px;}
+.bsub{background:var(--teal);color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;padding:12px;border-radius:9px;border:none;width:100%;cursor:pointer;}
+.bsub:hover{background:#14655a;}
+.maplink{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:10px 18px;border-radius:9px;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;margin-top:6px;}
+@media(max-width:700px){.fg{grid-template-columns:1fr;}.nv button:not(.cta){display:none;}.hd{display:none;}.vg{grid-template-columns:1fr;}.fg2{grid-template-columns:1fr;}.sb{flex-direction:column;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nb">
+    <div class="nl">🌱</div>
+    <div><div class="nn">Brote Psicopedagógico</div><div class="ns">Consultoría y Acompañamiento</div></div>
+  </a>
+  <div class="nv">
+    <button onclick="abre('sv')">Servicios</button>
+    <button onclick="abre('nos')">Nosotros</button>
+    <button onclick="abre('faq')">FAQ</button>
+    <button onclick="abre('ubi')">Ubicación</button>
+    <button class="cta" onclick="abre('cita')">Agendar cita</button>
+  </div>
+</nav>
+
+<section style="padding:0">
+  <div class="hero">
+    <div class="hd">🌱</div>
+    <div class="hi">
+      <div class="hb">Consultorio Psicopedagógico · Oaxaca de Juárez</div>
+      <h1>Todo brote merece florecer<span>Acompañamiento inclusivo y comunitario</span></h1>
+      <p class="hp">Somos un consultorio especializado en la atención psicopedagógica de niños con necesidades educativas especiales y familias en situación de vulnerabilidad, desde el corazón de Oaxaca.</p>
+      <div class="hbtns">
+        <button class="bw" onclick="abre('sv')">Conoce nuestros servicios</button>
+        <button class="bo" onclick="abre('con')">Contáctanos</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ts">
+  <span class="stag">Explora el consultorio</span>
+  <h2>¿Qué te gustaría conocer?</h2>
+  <p>Haz clic en cualquier apartado para ver la información completa.</p>
+  <div class="tg">
+    <div class="tb" onclick="abre('sv')"><span class="ti">🧩</span><span class="tl">Nuestros servicios</span><span class="ts2">¿Cómo te acompañamos?</span></div>
+    <div class="tb" onclick="abre('nos')"><span class="ti">🌿</span><span class="tl">Sobre nosotros</span><span class="ts2">Quiénes somos</span></div>
+    <div class="tb" onclick="abre('mis')"><span class="ti">🎯</span><span class="tl">Misión</span><span class="ts2">Nuestro propósito</span></div>
+    <div class="tb" onclick="abre('vis')"><span class="ti">🔭</span><span class="tl">Visión</span><span class="ts2">Hacia dónde vamos</span></div>
+    <div class="tb" onclick="abre('val')"><span class="ti">💚</span><span class="tl">Valores</span><span class="ts2">Lo que nos guía</span></div>
+    <div class="tb" onclick="abre('equ')"><span class="ti">👥</span><span class="tl">Nuestro equipo</span><span class="ts2">Las personas detrás</span></div>
+    <div class="tb" onclick="abre('aco')"><span class="ti">🤝</span><span class="tl">Cómo te acompañamos</span><span class="ts2">Nuestro proceso</span></div>
+    <div class="tb" onclick="abre('ubi')"><span class="ti">📍</span><span class="tl">Dónde nos ubicamos</span><span class="ts2">Horarios y dirección</span></div>
+    <div class="tb" onclick="abre('faq')"><span class="ti">❓</span><span class="tl">Preguntas frecuentes</span><span class="ts2">Resolvemos tus dudas</span></div>
+    <div class="tb" onclick="abre('con')"><span class="ti">✉️</span><span class="tl">Contáctanos</span><span class="ts2">Escríbenos</span></div>
+  </div>
+</section>
+
+<div class="cta-b">
+  <h2>¿Listo para dar el primer paso?</h2>
+  <p>Cada niño y familia merece un acompañamiento personalizado. Contáctanos hoy.</p>
+  <button class="ba" onclick="abre('cita')">Agendar una cita</button>
+</div>
+
+<footer>
+  <div class="fg">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;"><span style="font-size:24px;">🌱</span><span style="font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#fff;">Brote Psicopedagógico</span></div>
+      <p>Consultoría y Acompañamiento Psicopedagógico Inclusivo y Comunitario. Colonia Reforma, Oaxaca de Juárez.</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#" onclick="abre('sv')">Nuestros servicios</a></li>
+        <li><a href="#" onclick="abre('nos')">Sobre nosotros</a></li>
+        <li><a href="#" onclick="abre('faq')">Preguntas frecuentes</a></li>
+        <li><a href="#" onclick="abre('ubi')">Ubicación</a></li>
+        <li><a href="#" onclick="abre('cita')">Agendar cita</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li>📍 Col. Reforma, Oaxaca de Juárez</li>
+        <li>📱 951 579 8635</li>
+        <li>📱 951 115 4330</li>
+        <li>✉️ brotepsicopedagogico@gmail.com</li>
+        <li>📸 <a href="https://instagram.com/brote_jrj" target="_blank">@brote_jrj</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fb">© 2026 <span>Brote Psicopedagógico</span> · Consultoría y Acompañamiento · Oaxaca, México</div>
+</footer>
+
+<a href="https://wa.me/529515798635" class="waf" target="_blank">💬</a>
+
+<!-- ===== MODALES ===== -->
+
+<div class="ov" id="ov-sv">
+<div class="md">
+  <div class="mh"><div><div class="mt">🧩 Nuestros servicios</div><div class="ms">Atención especializada para cada necesidad</div></div><button class="mc" onclick="cierra('sv')">✕</button></div>
+  <div class="mb">
+    <div class="sb"><div class="sn">1</div><div><h4>Trastornos del Aprendizaje (Dificultades Específicas)</h4><p>Desafíos en lectura, escritura o cálculo. Incluye dislexia (dificultad para leer), disgrafía (dificultad para escribir) y discalculia (dificultad para realizar operaciones matemáticas). Ofrecemos evaluación diagnóstica e intervención personalizada con Planes de Apoyo Individualizado (PAI).</p><div class="tags"><span class="tag">Dislexia</span><span class="tag">Disgrafía</span><span class="tag">Discalculia</span><span class="tag">Niños 4–12 años</span></div></div></div>
+    <div class="sb"><div class="sn g">2</div><div><h4>Trastornos de la Conducta o Emocionales</h4><p>Incluye el Trastorno por Déficit de Atención con o sin Hiperactividad (TDAH) y problemas graves de comportamiento. Brindamos evaluación integral, intervención psicopedagógica y orientación a familias y docentes para acompañar el proceso de forma efectiva y con enfoque inclusivo.</p><div class="tags"><span class="tag g">TDAH</span><span class="tag g">Problemas de conducta</span><span class="tag g">Orientación familiar</span></div></div></div>
+    <div style="background:var(--tl);border-radius:10px;padding:14px 16px;margin-top:4px;"><p style="margin:0;font-size:13px;color:var(--dark);">💰 <strong>Tarifas diferenciadas</strong> según situación socioeconómica.<br>📱 951 579 8635 · 951 115 4330<br>✉️ brotepsicopedagogico@gmail.com</p></div>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-nos">
+<div class="md">
+  <div class="mh"><div><div class="mt">🌿 Sobre nosotros</div><div class="ms">Quiénes somos y por qué nacimos</div></div><button class="mc" onclick="cierra('nos')">✕</button></div>
+  <div class="mb">
+    <p><strong>Brote Psicopedagógico</strong> nace en el corazón de Oaxaca de Juárez como una respuesta concreta y comprometida ante una realidad que no puede seguir ignorándose: miles de niños, adolescentes y familias que enfrentan barreras para aprender y participar plenamente en la vida educativa y social de su comunidad.</p>
+    <p>El nombre no es casualidad. Un brote es la primera señal visible de vida: pequeño, frágil, pero lleno de fuerza. Así concebimos a cada usuario: no como personas con déficits que corregir, sino como seres humanos con un potencial genuino que, con el acompañamiento adecuado, puede florecer en cualquier condición.</p>
+    <div class="ic"><div class="icl">Tipo de consultoría</div><div class="icv">Educativa · Inclusiva · Comunitaria</div></div>
+    <div class="ic"><div class="icl">Población que atendemos</div><div class="icv">Niños con NEE (4–12 años) · Familias en situación de vulnerabilidad</div></div>
+    <div class="ic"><div class="icl">Sede</div><div class="icv">Colonia Reforma, Oaxaca de Juárez, Oaxaca</div></div>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-mis">
+<div class="md">
+  <div class="mh"><div><div class="mt">🎯 Misión</div><div class="ms">Nuestro propósito</div></div><button class="mc" onclick="cierra('mis')">✕</button></div>
+  <div class="mb">
+    <div class="ic" style="background:var(--gl);"><div class="icl" style="color:var(--green);">Nuestra misión</div><div class="icv" style="font-size:15px;line-height:1.7;">Brindar atención psicopedagógica de calidad, inclusiva y accesible a niños, adolescentes y familias de Oaxaca de Juárez, especialmente a quienes presentan necesidades educativas especiales o se encuentran en situación de vulnerabilidad, promoviendo el desarrollo integral del aprendizaje a través de intervenciones personalizadas, éticas y culturalmente pertinentes.</div></div>
+    <h3>¿Qué significa en la práctica?</h3>
+    <ul><li>Atención accesible con tarifas diferenciadas según la situación económica de cada familia.</li><li>Intervenciones diseñadas para el contexto cultural y social de Oaxaca.</li><li>Trabajo interdisciplinario con familias, escuelas y comunidad.</li><li>La inclusión no es un favor, es un derecho.</li></ul>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-vis">
+<div class="md">
+  <div class="mh"><div><div class="mt">🔭 Visión</div><div class="ms">Hacia dónde vamos</div></div><button class="mc" onclick="cierra('vis')">✕</button></div>
+  <div class="mb">
+    <div class="ic"><div class="icl">Nuestra visión al 2030</div><div class="icv" style="font-size:15px;line-height:1.7;">Ser, para el año 2030, el consultorio psicopedagógico de referencia en el estado de Oaxaca en materia de inclusión educativa, reconocido por su enfoque comunitario, la excelencia de sus profesionales y su impacto real en las trayectorias de vida de sus usuarios y familias.</div></div>
+    <h3>Nuestras metas hacia 2030</h3>
+    <ul><li>Consolidarnos como el consultorio de referencia en inclusión educativa en Oaxaca.</li><li>Ampliar nuestro equipo con especialistas en diversas áreas del desarrollo infantil.</li><li>Establecer alianzas con escuelas, DIF, USAER e instituciones de salud del estado.</li><li>Impactar positivamente en la trayectoria de vida de cientos de familias oaxaqueñas.</li></ul>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-val">
+<div class="md">
+  <div class="mh"><div><div class="mt">💚 Valores</div><div class="ms">Los principios que guían nuestro trabajo</div></div><button class="mc" onclick="cierra('val')">✕</button></div>
+  <div class="mb">
+    <div class="vg">
+      <div class="vc"><h4>🤝 Inclusión</h4><p>Toda persona tiene derecho a aprender y desarrollarse sin exclusión. La inclusión es un derecho y una responsabilidad colectiva.</p></div>
+      <div class="vc"><h4>💛 Respeto</h4><p>Reconocemos la dignidad, la diversidad cultural y los ritmos individuales de cada usuario y familia.</p></div>
+      <div class="vc"><h4>🌍 Compromiso social</h4><p>La práctica profesional está al servicio de los más vulnerables, en coherencia con los principios de la psicopedagogía comunitaria.</p></div>
+      <div class="vc"><h4>🔒 Ética profesional</h4><p>Actuamos con confidencialidad, honestidad y responsabilidad en todas nuestras intervenciones.</p></div>
+      <div class="vc"><h4>🤲 Trabajo colaborativo</h4><p>Fomentamos redes de apoyo entre familias, escuelas y comunidad para lograr una inclusión real y sostenida.</p></div>
+      <div class="vc"><h4>💡 Innovación pedagógica</h4><p>Aplicamos enfoques actualizados y basados en evidencia científica, adaptados al contexto oaxaqueño.</p></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-equ">
+<div class="md">
+  <div class="mh"><div><div class="mt">👥 Nuestro equipo</div><div class="ms">Las personas detrás de Brote Psicopedagógico</div></div><button class="mc" onclick="cierra('equ')">✕</button></div>
+  <div class="mb">
+    <div class="teg">
+      <div class="tec"><div class="tav">DG</div><h4>Directora General / Psicopedagoga</h4><p>Coordina todos los servicios. Atiende casos de mayor complejidad diagnóstica.</p></div>
+      <div class="tec"><div class="tav g">EN</div><h4>Especialista en NEE e Inclusión</h4><p>Evaluaciones psicopedagógicas integrales y Planes de Apoyo Individualizado.</p></div>
+      <div class="tec"><div class="tav a">PC</div><h4>Psicólogo/a Clínico-Educativo</h4><p>Atención psicológica individual y talleres de habilidades socioemocionales.</p></div>
+      <div class="tec"><div class="tav" style="background:#F3E8FF;color:#6B21A8;border-color:#9333EA;">OF</div><h4>Orientador/a Familiar</h4><p>Acompañamiento familiar, talleres de crianza y vinculación comunitaria.</p></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-aco">
+<div class="md">
+  <div class="mh"><div><div class="mt">🤝 Cómo te acompañamos</div><div class="ms">Nuestro proceso de atención paso a paso</div></div><button class="mc" onclick="cierra('aco')">✕</button></div>
+  <div class="mb">
+    <div class="sb"><div class="sn">1</div><div><h4>Primera consulta y valoración inicial</h4><p>Escuchamos tu situación y determinamos qué tipo de apoyo necesita tu hijo/a o familia. Esta sesión es orientativa.</p></div></div>
+    <div class="sb"><div class="sn">2</div><div><h4>Evaluación psicopedagógica integral</h4><p>Aplicamos instrumentos estandarizados (WISC-V, PROLEC, Batería Evalúa) para obtener un diagnóstico completo. Toma entre 2 y 4 sesiones.</p></div></div>
+    <div class="sb"><div class="sn g">3</div><div><h4>Informe y devolución a la familia</h4><p>Entregamos un informe detallado con resultados, diagnóstico y recomendaciones concretas para casa y la escuela.</p></div></div>
+    <div class="sb"><div class="sn g">4</div><div><h4>Plan de Apoyo Individualizado (PAI)</h4><p>Diseñamos un plan a medida. Trabajamos con el niño/a en sesiones periódicas y coordinamos con docentes y familia.</p></div></div>
+    <div class="sb"><div class="sn am">5</div><div><h4>Seguimiento continuo</h4><p>Monitoreamos el avance, ajustamos las estrategias y mantenemos comunicación constante con la familia para garantizar resultados reales.</p></div></div>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-ubi">
+<div class="md">
+  <div class="mh"><div><div class="mt">📍 Dónde nos ubicamos</div><div class="ms">Dirección, horarios y cómo llegar</div></div><button class="mc" onclick="cierra('ubi')">✕</button></div>
+  <div class="mb">
+    <div class="ic"><div class="icl">Dirección</div><div class="icv">Escuadrón 201 núm. 210, Colonia Reforma, C.P. 68050, Oaxaca de Juárez, Oaxaca</div></div>
+    <div class="ic"><div class="icl">Cómo llegar</div><div class="icv">A dos cuadras del Parque El Llano. Cerca de Av. Juárez y rutas de transporte urbano colectivo.</div></div>
+    <h3>Horarios de atención</h3>
+    <table class="st"><thead><tr><th>Día</th><th>Horario</th><th>Estado</th></tr></thead><tbody>
+      <tr><td>Lunes – Viernes</td><td>8:00 am – 5:00 pm</td><td class="op2">Abierto</td></tr>
+      <tr><td>Sábado</td><td>9:00 am – 3:00 pm</td><td class="op2">Abierto</td></tr>
+      <tr><td>Domingo</td><td>—</td><td class="cl">Cerrado</td></tr>
+    </tbody></table>
+    <h3>Ver en Google Maps</h3>
+    <a class="maplink" href="https://www.google.com/maps/search/Escuadrón+201+210+Colonia+Reforma+Oaxaca+de+Juárez" target="_blank">🗺️ Abrir en Google Maps</a>
+    <div style="margin-top:18px;">
+      <div class="cr"><div class="cri">📱</div><div><div class="crl">Teléfono / WhatsApp</div><div class="crv"><a href="tel:9515798635">951 579 8635</a> · <a href="tel:9511154330">951 115 4330</a></div></div></div>
+      <div class="cr"><div class="cri">✉️</div><div><div class="crl">Correo electrónico</div><div class="crv"><a href="mailto:brotepsicopedagogico@gmail.com">brotepsicopedagogico@gmail.com</a></div></div></div>
+      <div class="cr"><div class="cri">📸</div><div><div class="crl">Instagram</div><div class="crv"><a href="https://instagram.com/brote_jrj" target="_blank">@brote_jrj</a></div></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-faq">
+<div class="md">
+  <div class="mh"><div><div class="mt">❓ Preguntas frecuentes</div><div class="ms">Todo lo que necesitas saber antes de tu primera consulta</div></div><button class="mc" onclick="cierra('faq')">✕</button></div>
+  <div class="mb">
+    <div class="fi"><button class="fq" onclick="tfaq(this)">¿Cómo sé si mi hijo/a necesita una evaluación? <span class="fa2">▾</span></button><div class="fan"><p>Si tu hijo/a tiene dificultades persistentes para leer, escribir, hacer cálculos, mantener la atención o relacionarse con sus compañeros, puede ser una señal de que necesita evaluación. También si la escuela ha reportado bajo rendimiento o conducta que no corresponde a su edad.</p></div></div>
+    <div class="fi"><button class="fq" onclick="tfaq(this)">¿Cuánto dura el proceso de evaluación? <span class="fa2">▾</span></button><div class="fan"><p>El proceso toma entre 2 y 4 sesiones dependiendo de la edad del niño/a y las áreas a explorar. Al final entregamos un informe completo con resultados, diagnóstico y recomendaciones, explicado en una sesión con la familia.</p></div></div>
+    <div class="fi"><button class="fq" onclick="tfaq(this)">¿Atienden TDAH, dislexia y TEA? <span class="fa2">▾</span></button><div class="fan"><p>Sí. Contamos con experiencia en evaluación e intervención para TDAH, dislexia, disgrafía, discalculia, TEA, discapacidad intelectual y problemas de conducta. Cada caso se aborda de forma individualizada.</p></div></div>
+    <div class="fi"><button class="fq" onclick="tfaq(this)">¿Cuánto cuestan los servicios? <span class="fa2">▾</span></button><div class="fan"><p>Trabajamos con tarifas diferenciadas según la situación socioeconómica de cada familia. Contáctanos al 951 579 8635 o escríbenos a brotepsicopedagogico@gmail.com y con gusto te informamos.</p></div></div>
+    <div class="fi"><button class="fq" onclick="tfaq(this)">¿Necesito un diagnóstico previo? <span class="fa2">▾</span></button><div class="fan"><p>No. Puedes llegar con tus dudas y preocupaciones. Nosotros realizamos la valoración inicial para determinar qué apoyo necesita tu hijo/a o familia.</p></div></div>
+    <div class="fi"><button class="fq" onclick="tfaq(this)">¿Los padres participan en el proceso? <span class="fa2">▾</span></button><div class="fan"><p>Absolutamente. Realizamos sesiones de orientación familiar, talleres para padres y mantenemos comunicación constante sobre el avance de cada caso.</p></div></div>
+    <div class="fi"><button class="fq" onclick="tfaq(this)">¿Cómo agendo una cita? <span class="fa2">▾</span></button><div class="fan"><p>Por WhatsApp al 951 579 8635, llamando al 951 115 4330, o escribiendo a brotepsicopedagogico@gmail.com. También puedes llenar el formulario de cita en esta página.</p></div></div>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-con">
+<div class="md">
+  <div class="mh"><div><div class="mt">✉️ Contáctanos</div><div class="ms">Estamos aquí para acompañarte</div></div><button class="mc" onclick="cierra('con')">✕</button></div>
+  <div class="mb">
+    <div class="cr"><div class="cri">📱</div><div><div class="crl">WhatsApp / Teléfono</div><div class="crv"><a href="https://wa.me/529515798635">951 579 8635</a> · <a href="tel:9511154330">951 115 4330</a></div></div></div>
+    <div class="cr"><div class="cri">✉️</div><div><div class="crl">Correo electrónico</div><div class="crv"><a href="mailto:brotepsicopedagogico@gmail.com">brotepsicopedagogico@gmail.com</a></div></div></div>
+    <div class="cr"><div class="cri">📸</div><div><div class="crl">Instagram</div><div class="crv"><a href="https://instagram.com/brote_jrj" target="_blank">@brote_jrj</a></div></div></div>
+    <div class="cr"><div class="cri">📍</div><div><div class="crl">Dirección</div><div class="crv">Escuadrón 201 núm. 210, Col. Reforma, Oaxaca de Juárez</div></div></div>
+    <h3 style="margin-top:16px;">O déjanos un mensaje</h3>
+    <form action="https://formspree.io/f/brotepsicopedagogico@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nueva consulta — Brote Psicopedagógico">
+      <div class="fmg"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre completo" required></div>
+      <div class="fmg"><label>Teléfono / WhatsApp *</label><input type="tel" name="telefono" placeholder="951 123 4567" required></div>
+      <div class="fmg"><label>Motivo de consulta *</label><textarea name="mensaje" placeholder="Cuéntanos brevemente..." required></textarea></div>
+      <button type="submit" class="bsub">Enviar mensaje ✉️</button>
+    </form>
+  </div>
+</div>
+</div>
+
+<div class="ov" id="ov-cita">
+<div class="md">
+  <div class="mh"><div><div class="mt">📅 Agendar una cita</div><div class="ms">Completa el formulario y te contactamos a la brevedad</div></div><button class="mc" onclick="cierra('cita')">✕</button></div>
+  <div class="mb">
+    <form action="https://formspree.io/f/brotepsicopedagogico@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Solicitud de cita — Brote Psicopedagógico">
+      <div class="fg2">
+        <div class="fg2l">
+          <div class="fmg"><label>Nombre completo *</label><input type="text" name="nombre" placeholder="Tu nombre completo" required></div>
+          <div class="fmg"><label>Teléfono / WhatsApp *</label><input type="tel" name="telefono" placeholder="951 123 4567" required></div>
+          <div class="fmg"><label>Correo electrónico</label><input type="email" name="correo" placeholder="tucorreo@email.com"></div>
+        </div>
+        <div>
+          <div class="fmg"><label>Edad del niño/a</label><input type="text" name="edad" placeholder="Ej. 7 años"></div>
+          <div class="fmg"><label>Servicio de interés</label>
+            <select name="servicio">
+              <option value="">Selecciona una opción</option>
+              <option>Evaluación psicopedagógica</option>
+              <option>Intervención en NEE / TDAH</option>
+              <option>Dislexia / Disgrafía / Discalculia</option>
+              <option>Orientación familiar</option>
+              <option>No sé, necesito orientación</option>
+            </select>
+          </div>
+          <div class="fmg"><label>¿Cómo nos encontraste?</label>
+            <select name="como">
+              <option value="">Selecciona una opción</option>
+              <option>Instagram (@brote_jrj)</option>
+              <option>Recomendación</option>
+              <option>Búsqueda en internet</option>
+              <option>Escuela o institución</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="fmg"><label>Cuéntanos brevemente la situación *</label><textarea name="mensaje" placeholder="Describe lo que está pasando con tu hijo/a o familia..." required></textarea></div>
+      <button type="submit" class="bsub">Solicitar cita 📅</button>
+      <p style="font-size:12px;color:var(--body);text-align:center;margin-top:10px;">También puedes escribirnos por <a href="https://wa.me/529515798635" style="color:var(--teal);font-weight:600;">WhatsApp al 951 579 8635</a></p>
+    </form>
+  </div>
+</div>
+</div>
+
+<script>
+function abre(id) {
+  var el = document.getElementById('ov-' + id);
+  if (el) { el.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+}
+function cierra(id) {
+  var el = document.getElementById('ov-' + id);
+  if (el) { el.style.display = 'none'; document.body.style.overflow = ''; }
+}
+document.addEventListener('click', function(e) {
+  if (e.target && e.target.classList && e.target.classList.contains('ov')) {
+    e.target.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var ovs = document.querySelectorAll('.ov');
+    for (var i = 0; i < ovs.length; i++) { ovs[i].style.display = 'none'; }
+    document.body.style.overflow = '';
+  }
+});
+function tfaq(btn) {
+  var item = btn.parentElement;
+  var abierto = item.classList.contains('op');
+  var todos = item.parentElement.querySelectorAll('.fi.op');
+  for (var i = 0; i < todos.length; i++) { todos[i].classList.remove('op'); }
+  if (!abierto) { item.classList.add('op'); }
+}
+</script>
+</body>
+</html>
